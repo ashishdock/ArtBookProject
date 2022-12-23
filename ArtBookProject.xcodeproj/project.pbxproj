@@ -14,6 +14,7 @@
 		DB83BA0829556E9F000DB0AF /* ArtBookProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB83BA0629556E9F000DB0AF /* ArtBookProject.xcdatamodeld */; };
 		DB83BA0A29556EA0000DB0AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB83BA0929556EA0000DB0AF /* Assets.xcassets */; };
 		DB83BA0D29556EA0000DB0AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB83BA0B29556EA0000DB0AF /* LaunchScreen.storyboard */; };
+		DB83BA1529557272000DB0AF /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB83BA1429557272000DB0AF /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		DB83BA0929556EA0000DB0AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB83BA0C29556EA0000DB0AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB83BA0E29556EA0000DB0AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB83BA1429557272000DB0AF /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				DB83BA0B29556EA0000DB0AF /* LaunchScreen.storyboard */,
 				DB83BA0E29556EA0000DB0AF /* Info.plist */,
 				DB83BA0629556E9F000DB0AF /* ArtBookProject.xcdatamodeld */,
+				DB83BA1429557272000DB0AF /* DetailsViewController.swift */,
 			);
 			path = ArtBookProject;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				DB83BA0229556E9F000DB0AF /* ViewController.swift in Sources */,
 				DB83B9FE29556E9F000DB0AF /* AppDelegate.swift in Sources */,
 				DB83BA0029556E9F000DB0AF /* SceneDelegate.swift in Sources */,
+				DB83BA1529557272000DB0AF /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
