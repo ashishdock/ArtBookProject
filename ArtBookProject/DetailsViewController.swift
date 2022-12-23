@@ -73,7 +73,8 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
             fatalError("Fatal Error! Error persisting data, \(error)")
         }
         
-        
+        NotificationCenter.default.post(name: NSNotification.Name("newData"), object: nil)
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
