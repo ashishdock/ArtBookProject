@@ -73,7 +73,7 @@
                                     <action selector="saveButtonPressed:" destination="4In-c9-njt" eventType="touchUpInside" id="PcZ-T2-gsJ"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dNc-ug-Oqd">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="select" translatesAutoresizingMaskIntoConstraints="NO" id="dNc-ug-Oqd">
                                 <rect key="frame" x="20" y="154" width="374" height="246"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -113,6 +113,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="select" width="88" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
