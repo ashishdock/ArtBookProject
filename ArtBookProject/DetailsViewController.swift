@@ -9,12 +9,22 @@ import UIKit
 
 class DetailsViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var artistField: UITextField!
+    @IBOutlet weak var yearField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(gestureRecognizer)
     }
     
+    @objc func hideKeyboard() {
+        view.endEditing(true)
+    }
 
     /*
     // MARK: - Navigation
@@ -26,4 +36,8 @@ class DetailsViewController: UIViewController {
     }
     */
 
+    @IBAction func saveButtonPressed(_ sender: UIButton) {
+        print("save button clicked")
+    }
 }
+

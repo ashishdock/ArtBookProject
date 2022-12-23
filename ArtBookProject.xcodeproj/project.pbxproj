@@ -63,12 +63,12 @@
 				DB83B9FD29556E9F000DB0AF /* AppDelegate.swift */,
 				DB83B9FF29556E9F000DB0AF /* SceneDelegate.swift */,
 				DB83BA0129556E9F000DB0AF /* ViewController.swift */,
+				DB83BA1429557272000DB0AF /* DetailsViewController.swift */,
 				DB83BA0329556E9F000DB0AF /* Main.storyboard */,
-				DB83BA0929556EA0000DB0AF /* Assets.xcassets */,
+				DB83BA0629556E9F000DB0AF /* ArtBookProject.xcdatamodeld */,
 				DB83BA0B29556EA0000DB0AF /* LaunchScreen.storyboard */,
 				DB83BA0E29556EA0000DB0AF /* Info.plist */,
-				DB83BA0629556E9F000DB0AF /* ArtBookProject.xcdatamodeld */,
-				DB83BA1429557272000DB0AF /* DetailsViewController.swift */,
+				DB83BA0929556EA0000DB0AF /* Assets.xcassets */,
 			);
 			path = ArtBookProject;
 			sourceTree = "<group>";
