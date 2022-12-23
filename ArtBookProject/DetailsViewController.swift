@@ -14,11 +14,61 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var artistField: UITextField!
     @IBOutlet weak var yearField: UITextField!
+    @IBOutlet weak var saveButton: UIButton!
     
+    var chosenPainting = ""
+    var chosenPaintingId: UUID?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if chosenPainting != "" {
+            // Core Data
+//            let stringUUID = chosenPaintingId!.uuidString
+//            print(stringUUID)
+            
+            saveButton.isHidden = true
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Paintings")
+            
+            let idString = chosenPaintingId?.uuidString
+            
+            fetchRequest.predicate = NSPredicate(format: "id = %@", idString!)
+            
+            fetchRequest.returnsObjectsAsFaults = false
+            
+            do {
+                let results = try context.fetch(fetchRequest)
+                if results.count > 0 {
+                    for result in results as! [NSManagedObject] {
+                        if let name = result.value(forKey: "name") as? String {
+                            nameField.text = name
+                        }
+                        if let artist = result.value(forKey: "artist") as? String {
+                            artistField.text = artist
+                        }
+                        if let year = result.value(forKey: "year") as? Int {
+                            yearField.text = String(year)
+                        }
+                        if let imageData = result.value(forKey: "image") as? Data {
+                            let image = UIImage(data: imageData)
+                            imageView.image = image
+                        }
+                        
+                    }
+                }
+            } catch  {
+                fatalError("Error retrieving data! \(error)")
+            }
+            
+        } else {
+            saveButton.isEnabled = false
+            nameField.text = ""
+            artistField.text = ""
+            yearField.text = ""
+        }
         
         
 // Recognizers
@@ -42,6 +92,7 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imageView.image = info[.originalImage] as? UIImage
+        saveButton.isEnabled = true
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -76,5 +127,11 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         NotificationCenter.default.post(name: NSNotification.Name("newData"), object: nil)
         self.navigationController?.popViewController(animated: true)
     }
+    
+    
+    
+    
+    
+    
 }
 

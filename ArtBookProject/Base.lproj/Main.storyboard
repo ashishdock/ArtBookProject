@@ -87,6 +87,7 @@
                         <outlet property="artistField" destination="q2s-82-hKL" id="hcf-sm-c4Y"/>
                         <outlet property="imageView" destination="dNc-ug-Oqd" id="bXL-Vm-U6N"/>
                         <outlet property="nameField" destination="7oY-ec-ElB" id="ZUG-ja-WjM"/>
+                        <outlet property="saveButton" destination="DSh-NU-4rX" id="DKL-u7-F7K"/>
                         <outlet property="yearField" destination="hzK-fD-JfF" id="nhH-1q-bex"/>
                     </connections>
                 </viewController>
